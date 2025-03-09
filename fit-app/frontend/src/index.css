@@ -1,0 +1,7 @@
+body {
+    background-color: rgb(225, 225, 225);
+    color: white;
+    /* Yazıları beyaz yaparak görünürlüğü artır */
+    margin: 0;
+    padding: 0;
+}

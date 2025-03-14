@@ -7,17 +7,11 @@ export default function WorkoutForm() {
     const [title, setTitle] = useState("");
     const [reps, setReps] = useState("")
     const [load, setLoad] = useState("")
-    const [error, setError] = useState("")
 
     const dispatch = useDispatch();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
-        if (!title || !reps || !load) {
-            setError("Tüm alanları doldurun!");
-            return;
-        }
 
         const workout = { title, reps, load };
 
@@ -26,9 +20,7 @@ export default function WorkoutForm() {
             setTitle("");
             setReps("");
             setLoad("");
-            setError(null);
         } catch (err) {
-            setError("Bir hata oluştu");
             console.log(err);
         }
     };

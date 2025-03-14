@@ -46,8 +46,8 @@ export default function Navbar() {
     };
 
     const handleEditClick = (workout) => {
-        setCurrentWorkout(workout); 
-        handleOpen(); 
+        setCurrentWorkout(workout);
+        handleOpen();
     };
 
     const handleChange = (e) => {
@@ -64,7 +64,8 @@ export default function Navbar() {
     return (
 
         <Box gap={3} display={"flex"} flexDirection={"column"} mt={14} pl={2} sx={{ width: "60%" }}>
-            {workouts.map((workout) => (
+            {workouts.length > 0 ? (workouts.map((workout) => (
+
                 <Box display={"flex"} flexDirection={"column"} alignItems={"center"} justifyContent={"flex-start"} key={workout._id} p={4} sx={{ width: "100%", backgroundColor: "white", borderRadius: 1, boxShadow: '2px 2px 5px rgba(0, 0, 0, 0.3)' }} >
 
                     <h2 style={{ color: "black", fontFamily: "arial" }}>{workout.title}</h2>
@@ -86,7 +87,8 @@ export default function Navbar() {
                     </Box>
 
                 </Box>
-            ))}
+            ))) : (<h2 style={{ color: "black" }}>You have not add any workout yet!</h2>)}
+
 
             {/** Edit Modal starts */}
             <Modal open={open} onClose={handleClose} aria-labelledby="modal-modal-title" aria-describedby="modal-modal-description">
@@ -94,10 +96,7 @@ export default function Navbar() {
                     <TextField name="title" label="Title" variant="outlined" value={currentWorkout.title} onChange={handleChange} />
                     <TextField inputProps={{ min: 0 }} name="reps" type='number' label="Reps" variant="outlined" value={currentWorkout.reps} onChange={handleChange} />
                     <TextField inputProps={{ min: 0 }} name="load" type='number' label="Load" variant="outlined" value={currentWorkout.load} onChange={handleChange} />
-                    <Button color='success' variant="contained" onClick={() => { handleUpdate }
-
-
-                    }>Update</Button>
+                    <Button color='success' variant="contained" onClick={() => handleUpdate()}>Update</Button>
                 </Box>
             </Modal>
         </Box>

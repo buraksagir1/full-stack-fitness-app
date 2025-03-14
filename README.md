@@ -3,8 +3,9 @@ The Fit App is an application that allows users to track physical health and exe
 Features:
 
 Exercise Tracking: Users can record the exercises they do, track their types, duration and intensity.
-Progress Tracking: Users can view daily, weekly and monthly exercise data.
 Exercise Deletion: Users can delete the exercises they want.
+Exercise Editing: Users can edit the exercises.
+
 
 Technologies:
 
@@ -27,8 +28,7 @@ Steps:
 Go to the root directory of the Frontend project.
 To install the necessary dependencies:
  npm install
-# or
-yarn installation
+
 
 
 2-Backend Installation:
@@ -36,8 +36,7 @@ yarn installation
 Go to the root directory of the backend project.
 To install the necessary dependencies:
  npm install
-# or
-yarn installation
+
 
 
 3-Database Configuration:
@@ -48,12 +47,10 @@ Running the Application:
 
 
 4-Start the backend:
- npm run giant
-# or
-yarn giant
+ npm run dev
+
 
 
 5-Start the frontend:
- npm start
-# or
-yarn start
+ npm run dev
+

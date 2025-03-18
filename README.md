@@ -46,11 +46,11 @@ Launch MongoDB locally or in the cloud (for example, MongoDB Atlas).
 Running the Application:
 
 
-4-Start the backend:
+4-Go to the root directory of the backend project and start the backend:
  npm run dev
 
 
 
-5-Start the frontend:
+5-Go to the root directory of the Frontend project and start the frontend:
  npm run dev
 
